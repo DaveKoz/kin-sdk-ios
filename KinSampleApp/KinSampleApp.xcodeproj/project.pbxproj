@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		680F788E219D96240064DA26 /* KinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68D049F121931CBF00F27492 /* KinSDK.framework */; };
 		680F788F219D96240064DA26 /* KinSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 68D049F121931CBF00F27492 /* KinSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6841763A223FC34D00F4457C /* KinPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68417638223FC34A00F4457C /* KinPlugin.swift */; };
+		6841763B223FC34D00F4457C /* KinBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 68417639223FC34B00F4457C /* KinBinding.m */; };
 		820AAABA2035D2E90077D873 /* RecentTxsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820AAAB72035D2E90077D873 /* RecentTxsCell.swift */; };
 		820AAABC2035D6BF0077D873 /* TxCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820AAABB2035D6BF0077D873 /* TxCells.swift */; };
 		820AAABE2035D79B0077D873 /* RecentTxsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820AAABD2035D79B0077D873 /* RecentTxsTableViewController.swift */; };
@@ -79,6 +81,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		68417635223FC34800F4457C /* KinSampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KinSampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		68417638223FC34A00F4457C /* KinPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinPlugin.swift; sourceTree = "<group>"; };
+		68417639223FC34B00F4457C /* KinBinding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KinBinding.m; sourceTree = "<group>"; };
+		6841763C223FC73200F4457C /* KinBinding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KinBinding.h; sourceTree = "<group>"; };
 		68D049E721931CBF00F27492 /* KinSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KinSDK.xcodeproj; path = ../KinSDK/KinSDK.xcodeproj; sourceTree = "<group>"; };
 		820AAAB72035D2E90077D873 /* RecentTxsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentTxsCell.swift; sourceTree = "<group>"; };
 		820AAABB2035D6BF0077D873 /* TxCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TxCells.swift; sourceTree = "<group>"; };
@@ -150,6 +156,9 @@
 		919238721FB09E9000390BE5 /* KinSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				6841763C223FC73200F4457C /* KinBinding.h */,
+				68417639223FC34B00F4457C /* KinBinding.m */,
+				68417638223FC34A00F4457C /* KinPlugin.swift */,
 				919238891FB1BE0000390BE5 /* Cells */,
 				919238731FB09E9000390BE5 /* AppDelegate.swift */,
 				919238751FB09E9000390BE5 /* HomeViewController.swift */,
@@ -163,6 +172,7 @@
 				9192387F1FB09E9000390BE5 /* Info.plist */,
 				919238851FB0A16100390BE5 /* UIKitExtensions.swift */,
 				910EEA031FB8A60C00610D06 /* HelperExtensions.swift */,
+				68417635223FC34800F4457C /* KinSampleApp-Bridging-Header.h */,
 			);
 			path = KinSampleApp;
 			sourceTree = "<group>";
@@ -224,6 +234,7 @@
 				TargetAttributes = {
 					9192386F1FB09E9000390BE5 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -297,6 +308,7 @@
 				91DDFE011FCABED7004B0903 /* DeleteAccountCell.swift in Sources */,
 				919238761FB09E9000390BE5 /* HomeViewController.swift in Sources */,
 				820AAABA2035D2E90077D873 /* RecentTxsCell.swift in Sources */,
+				6841763A223FC34D00F4457C /* KinPlugin.swift in Sources */,
 				9192389B1FB1C62800390BE5 /* KinClientCell.swift in Sources */,
 				820AAABE2035D79B0077D873 /* RecentTxsTableViewController.swift in Sources */,
 				919238741FB09E9000390BE5 /* AppDelegate.swift in Sources */,
@@ -307,6 +319,7 @@
 				910EEA001FB8A3D000610D06 /* SendTransactionViewController.swift in Sources */,
 				919238861FB0A16100390BE5 /* UIKitExtensions.swift in Sources */,
 				910EEA061FB8A8DC00610D06 /* SendTransactionTableViewCell.swift in Sources */,
+				6841763B223FC34D00F4457C /* KinBinding.m in Sources */,
 				910EEA041FB8A60C00610D06 /* HelperExtensions.swift in Sources */,
 				919238881FB0AA6A00390BE5 /* KinSampleViewController.swift in Sources */,
 				9176B9001FB8811A00AEDBDE /* KeyStoreViewController.swift in Sources */,
@@ -455,6 +468,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MZAK745F32;
 				ENABLE_BITCODE = NO;
@@ -463,6 +477,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kinfoundation.KinSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KinSampleApp/KinSampleApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -473,6 +489,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MZAK745F32;
 				ENABLE_BITCODE = NO;
@@ -481,6 +498,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kinfoundation.KinSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KinSampleApp/KinSampleApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
